@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=cp1251" />
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+    <title>Test task</title>
+ </head>
+ <body>
+     <script type="text/javascript">
+         var rate = 0
+         var tempYourRate = 0
+         var arrRate = []
+         
+         function tap_rate(event, el) {
+            // Позиция клика
+            event = event || window.event;
+            if (event.clientX<=el.clientWidth) {
+                rate=Math.ceil(event.clientX/el.clientWidth*5);
+            }
+            
+            // Перезаливка звезд
+            el.getElementsByTagName('div')[0].style.width=rate*20+'%';
+            tempYourRate = rate*20
+        }
+        
+        function tap_button(){
+            var i;
+            var tempRate = 0;
+            if (tempYourRate != 0){
+                arrRate.push(tempYourRate)
+            }
+
+            for (i = 0; i < arrRate.length; i++) {
+                tempRate = tempRate + arrRate[i]
+            }
+
+            if (tempYourRate != 0){
+                general_rate.style.width=tempRate/arrRate.length+'%';
+            }
+        }
+    </script>
+     <p>Рейтинг:</p>
+    <div class="rateBackground">
+        <div id="general_rate"></div>
+    </div>
+     
+    <p>Ваша оценка:</p>
+    <div class="rateBackground" onclick="tap_rate(arguments[0], this);">
+        <div></div>
+    </div>
+    <div id="rate"></div>
+
+    <!--<form method="get">
+       <input type="button" value="Кнопка" class="buttonRate" onclick="tap_button()"/>
+    </form>-->
+    <a class="buttonRate" onclick="tap_button()">
+        <span class="but_left"></span>
+        <span class="but_right"></span>
+        <span class="but_center">
+            Кнопка
+        </span>
+    </a>
+ </body>
+</html>

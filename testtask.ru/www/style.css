@@ -1,0 +1,97 @@
+body {
+    font-family: Verdana;
+    font-size: 14px;
+}
+.rateBackground {
+    position: relative;
+    background: url(image/star_inactive.png) repeat-x;
+    width: 90px;
+    height: 16px;
+    cursor: pointer;
+}
+.rateBackground div {
+    position: absolute;
+    background: url(image/star_active.png) repeat-x;
+    width: 0%;
+    height: 100%;
+}
+/*.buttonRate {
+    background: url(image/button_normal.png);
+    border: 0;
+    width: 86px;
+    height: 24px;
+    padding-bottom: 3px;
+    margin-top: 80px;
+    cursor: pointer;
+}
+.buttonRate:hover {
+    background: url(image/button_hover.png);
+}
+.buttonRate:focus {
+    background: url(image/button_focus.png);
+}   
+.buttonRate:active {
+    background: url(image/button_pressed.png);
+}   */
+
+.buttonRate { 
+    position: relative; 
+    display: inline-block; 
+    height: 24px;
+    margin-top: 80px;
+    line-height: 20px; 
+    cursor: pointer; 
+}
+.but_left { 
+    position: absolute; 
+    left: 0px; 
+    top: 0;
+    background: url('image/button_normal_left.png'); 
+    width: 12px; 
+    height: 24px; 
+}
+.but_right { 
+    position: absolute; 
+    right: 0px; 
+    top: 0;
+    background: url('image/button_normal_right.png'); 
+    width: 12px; 
+    height: 24px; 
+}
+.but_center {   
+    margin: 0 12px;
+    background: url('image/button_normal_center.png');  
+    width: 62px;
+    height: 24px;
+    display: block;
+    line-height: 22px; 
+    font-size: 12px;  
+    text-align: center;
+}
+.buttonRate:hover .but_center {  
+    background: url('image/button_hover_center.png');
+}
+.buttonRate:hover .but_right {  
+    background: url('image/button_hover_right.png');
+}
+.buttonRate:hover .but_left {
+    background: url('image/button_hover_left.png');
+}
+.buttonRate:focus .but_center {  
+    background: url('image/button_focus_center.png');
+}
+.buttonRate:focus .but_right {  
+    background: url('image/button_focus_right.png');
+}
+.buttonRate:focus .but_left {
+    background: url('image/button_focus_left.png'); 
+}
+.buttonRate:active  .but_center {  
+    background: url('image/button_pressed_center.png'); 
+}
+.buttonRate:active  .but_right {  
+    background: url('image/button_pressed_right.png'); 
+}
+.buttonRate:active  .but_left {
+    background: url('image/button_pressed_left.png');  
+}
